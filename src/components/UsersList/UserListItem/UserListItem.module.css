@@ -1,0 +1,35 @@
+.userCard {
+  display: flex;
+  flex-direction: column;
+
+  width: 9.5rem;
+  /* max-height: 11rem; */
+  min-width: 5.625rem;
+
+  /* height: 240px; */
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.shadowLightMale {
+  /* Базова темна тінь для глибини + фіолетовий розсіяний неоновий ареол */
+  box-shadow:
+    0 0.2rem 0.4rem rgba(201, 87, 10, 0.95),
+    0 0 0.72rem rgba(239, 189, 8, 0.913);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.shadowLightFemale {
+  box-shadow:
+    0 0.2rem 0.4rem rgba(214, 7, 190, 0.95),
+    0 0 0.72rem rgba(152, 4, 144, 0.995);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}

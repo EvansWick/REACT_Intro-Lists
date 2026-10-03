@@ -1,0 +1,26 @@
+:root {
+  --nickColor: rgb(88, 87, 87);
+}
+
+.subscribed,
+.unsubscribed {
+  border-radius: 0.2rem;
+  font-size: 0.5rem;
+  padding: 0.2rem 0.25rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.subscribed {
+  background-color: var(white);
+  color: black;
+  outline: none;
+}
+
+.unsubscribed {
+  background-color: var(--btnBg);
+  background-color: inherit;
+  outline: 2px var(--nickColor) solid;
+  color: var(--nickColor);
+}

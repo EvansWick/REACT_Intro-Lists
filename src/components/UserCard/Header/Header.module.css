@@ -1,0 +1,5 @@
+.header {
+  min-height: 3.1rem;
+  max-width: 100%;
+  object-fit: cover;
+}
