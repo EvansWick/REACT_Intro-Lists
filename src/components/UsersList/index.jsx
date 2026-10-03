@@ -17,7 +17,6 @@ export default class UsersList extends Component {
     return this.state.usersInfo.map((item) => {
       return (
         <UserListItem
-          removeFunc={this.removeItem}
           user={item}
           key={item.id}
           functions={{
@@ -112,7 +111,7 @@ export default class UsersList extends Component {
         });
         --usersInfoCopy[foundId].stats.followers;
         console.log(
-          "add subscriber on id:",
+          "remove subscriber on id:",
           id,
           "Subscribers:",
           usersInfoCopy[foundId].stats.followers,

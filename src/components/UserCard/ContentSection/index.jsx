@@ -16,7 +16,7 @@ function ContentSection({ userData, functions }) {
       а просто викликає їхній метод render() з новими значеннями в this.props. 
       Якщо всередині читати this.state, 
       компонент залишається "сліпим" до будь-яких зовнішніх змін. */}
-      <UserStatistic userData={userData}></UserStatistic>
+      <UserStatistic statsData={userData.stats}></UserStatistic>
       <UserActionPanel
         functions={functions}
         userData={userData}
@@ -41,7 +41,7 @@ function UserPhoto({ userPhotoSrc, isOnline }) {
   );
 }
 
-function UserStatistic({ userData }) {
+function UserStatistic({ statsData }) {
   return (
     <div className={styles.fullPanelContainer}>
       <div className={styles.panelItemContainer}>
@@ -49,21 +49,21 @@ function UserStatistic({ userData }) {
         <div className={styles.panelItem}>
           <span className={styles.panelItemCategory}>Лайків</span>
           <span className={styles.panelItemCategoryValue}>
-            {userData.stats.likes}
+            {statsData.likes}
           </span>
         </div>
         {/* second pannel item */}
         <div className={styles.panelItem}>
           <span className={styles.panelItemCategory}>Підписників</span>
           <span className={styles.panelItemCategoryValue}>
-            {userData.stats.followers}
+            {statsData.followers}
           </span>
         </div>
         {/* third pannel item */}
         <div className={styles.panelItem}>
           <span className={styles.panelItemCategory}>Постів</span>
           <span className={styles.panelItemCategoryValue}>
-            {userData.stats.posts}
+            {statsData.posts}
           </span>
         </div>
       </div>
@@ -71,7 +71,7 @@ function UserStatistic({ userData }) {
   );
 }
 
-function LikeBtn({ config: { filled, size, color, isLiked }, functions, uId }) {
+function LikeBtn({ config: {size, color, isLiked }, functions, uId }) {
   return (
     <button
       onClick={
